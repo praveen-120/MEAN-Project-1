@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background-color: skyblue;
+        margin: 100px;
+    }
+
+    form {
+        width: 80%;
+        margin: auto;
+    }
+
+    fieldset {
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin: 20px auto;
+        box-shadow: 0 0 5px #333;
+        background-color: white;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 400px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 30%;
+        height: 40px;
+        text-align: center;
+        background-color: black;
+        margin-left: 400px;
+        color: white;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+    }
+
+    .registration {
+        display: flex;
+    }
+
+    .cotainer1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .cotainer2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .cotainer3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PROGRAMMING LANGUAGES BLOG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addBlog.html">Add Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="viewBlogs.html">View Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="registration">
+        <form name="registration-form" onsubmit="registerUser()">
+            <fieldset>
+                <h2>Create Account</h2>
+                <div class="cotainer1">
+                    <label for="first-name">First <br>Name</label><br>
+                    <input type="text" id="first-name" name="first-name" required/>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" />
+                </div>
+                <div class="cotainer2">
+                    <label for="email">Email</label><br><br>
+                    <input type="text" id="email" name="email" required/>
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" />
+                </div>
+                <div class="cotainer3">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required/>
+                    <label for="forg-password">Confirm Password</label>
+                    <input type="text" id="forg-password" name="forg-password" required/>
+                </div>
+
+                <button  type="submit">Sign Up</button><br><br>
+            </fieldset>
+    </div>
+    <script src="formSubmit.js"></script>
+</body>
+
+</html>
